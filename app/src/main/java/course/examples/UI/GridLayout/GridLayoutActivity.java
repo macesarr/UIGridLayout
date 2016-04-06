@@ -4,23 +4,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.Toast;
 
 public class GridLayoutActivity extends Activity {
 
+    public static final String PREFS_NAME = "DATA";
+
 	protected static final String EXTRA_RES_ID = "POS";
-	
-	private ArrayList<Integer> mThumbIdsFlowers = new ArrayList<Integer>(
-			Arrays.asList(R.drawable.image1, R.drawable.image2,
-					R.drawable.image3, R.drawable.image4, R.drawable.image5,
-					R.drawable.image6, R.drawable.image7, R.drawable.image8,
-					R.drawable.image9, R.drawable.image10, R.drawable.image11,
-					R.drawable.image12));
+
+    private ArrayList<Integer> mThumbIdsFlags = new ArrayList<Integer>(
+            Arrays.asList(R.drawable.argentina, R.drawable.australia,
+                    R.drawable.bolivia, R.drawable.brazil, R.drawable.canada,
+                    R.drawable.china, R.drawable.colombia, R.drawable.cuba,
+                    R.drawable.ecuador, R.drawable.france, R.drawable.macedonia,
+                    R.drawable.mexico));
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -29,16 +35,35 @@ public class GridLayoutActivity extends Activity {
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 
-		gridview.setAdapter(new ImageAdapter(this, mThumbIdsFlowers));
+		gridview.setAdapter(new GalleryAdapter(this, mThumbIdsFlags));
 
-		gridview.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> parent, View v,
-					int position, long id) {
-				Intent intent = new Intent(GridLayoutActivity.this,
-						ImageViewActivity.class);
-				intent.putExtra(EXTRA_RES_ID, (int) id);
-				startActivity(intent);
+        // Capture GridView item click
+        gridview.setOnItemClickListener(new OnItemClickListener() {
+
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+
+                // Launch ViewImage.java using intent
+                Intent intent = new Intent(GridLayoutActivity.this, SummaryActivity.class);
+
+                // Send captured position to ViewImage.java
+                intent.putExtra("id", position);
+
+                // Start ViewImage.java
+                startActivity(intent);
+            }
+        });
+
+		// open new activity
+
+		final Button statisticButton = (Button) findViewById(R.id.btnStatitic);
+
+		statisticButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent helloAndroidIntent = new Intent(GridLayoutActivity.this,
+						StatisticActivity.class);
+				startActivity(helloAndroidIntent);
 			}
 		});
+
 	}
 }

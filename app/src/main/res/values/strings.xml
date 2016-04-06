@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">UI GridLayout</string>
+    <string name="str_statistic">View statistic</string>
+    <string name="str_statistic_title">General Statistics</string>
+
+    <string name="str_summary_send">Send</string>
+
+    <string-array name="visits_array">
+        <item></item>
+        <item>Always</item>
+        <item>Regular</item>
+        <item>Never</item>
+    </string-array>
+
+    <string-array name="likes_array">
+        <item></item>
+        <item>I hate this!</item>
+        <item>I like!</item>
+        <item>I really love!</item>
+    </string-array>
+
+    <!-- Summaries -->
+    <string name="summ_argentina">La República Argentina, conocida simplemente como Argentina, es un país soberano de América del Sur, ubicado en el extremo sur y sudeste de dicho subcontinente. Adopta la forma de gobierno republicana, representativa y federal</string>
+    <string name="summ_australia">Australia es un país soberano de Oceanía, cuya forma de gobierno es la monarquía constitucional federal parlamentaria.</string>
 </resources>
