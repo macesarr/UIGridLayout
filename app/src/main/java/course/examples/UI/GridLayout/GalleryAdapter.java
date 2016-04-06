@@ -58,7 +58,4 @@ public class GalleryAdapter extends BaseAdapter {
         return imageView;
     }
 
-    static class ViewHolder{
-        ImageView imageView;
-    }
 }

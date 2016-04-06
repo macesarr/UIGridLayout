@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">UI GridLayout</string>
+    <string name="app_name">Trabajo UBI</string>
+    <string name="team">Michelle Chavez Díaz, Aireen rosas, César Juárez Díaz</string>
     <string name="str_statistic">View statistic</string>
     <string name="str_statistic_title">General Statistics</string>
 
     <string name="str_summary_send">Send</string>
 
     <string-array name="visits_array">
-        <item></item>
+        <item>Visited it?</item>
         <item>Always</item>
         <item>Regular</item>
         <item>Never</item>
     </string-array>
 
     <string-array name="likes_array">
-        <item></item>
+        <item>Enyjoyed it?</item>
+        <item>I really love!</item>
         <item>I hate this!</item>
         <item>I like!</item>
-        <item>I really love!</item>
+
     </string-array>
 
     <!-- Summaries -->
     <string name="summ_argentina">La República Argentina, conocida simplemente como Argentina, es un país soberano de América del Sur, ubicado en el extremo sur y sudeste de dicho subcontinente. Adopta la forma de gobierno republicana, representativa y federal</string>
     <string name="summ_australia">Australia es un país soberano de Oceanía, cuya forma de gobierno es la monarquía constitucional federal parlamentaria.</string>
+    <string name="summ_bolivia">Bolivia, oficialmente Estado Plurinacional de Bolivia, es un país situado en el centro-oeste de América del Sur, cuenta con una población de cerca de 10,1 millones de habitantes.</string>
+    <string name="summ_brazil">Brasil, oficialmente República Federativa del Brasil, es un país soberano de América del Sur que comprende la mitad oriental del subcontinente y algunos grupos de pequeñas islas en el océano Atlántico.</string>
+    <string name="summ_canada">Canadá es un país soberano de América del Norte, cuya forma de gobierno es la monarquía parlamentaria federal. Su territorio está organizado en diez provincias y tres territorios. Su capital es la ciudad de Ottawa y la ciudad más poblada es Toronto. </string>
+    <string name="summ_china">La República Popular de China, o simplemente China, es un Estado soberano situado en Asia Oriental.</string>
+    <string name="summ_colombia">Colombia, oficialmente República de Colombia, es un país situado en la región noroccidental de América del Sur. Está constituido en un estado unitario, social y democrático de derecho cuya forma de gobierno es presidencialista.</string>
+    <string name="summ_cuba">La República de Cuba es un país insular del Caribe, asentado en un archipiélago del mar de las Antillas. Su forma de gobierno es la de república socialista.</string>
+    <string name="summ_ecuador">Ecuador, oficialmente denominado República del Ecuador, es un país de América ubicado en la región noroccidental de América del Sur. Limita al norte con Colombia, al oeste con el océano Pacífico y al sur y al este con Perú.</string>
+    <string name="summ_france">Francia; AFI, oficialmente República Francesa, es un país soberano, miembro de la Unión Europea, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la república semipresidencialista. </string>
+    <string name="summ_macedonia">La República de Macedonia es un país independiente sin litoral, situado en la península balcánica, en el sureste de Europa. Limita al norte con Serbia y Kosovo, al este con Bulgaria, al sur con Grecia y al oeste con Albania.</string>
+    <string name="summ_mexico">México, cuyo nombre oficial es Estados Unidos Mexicanos, es un país de América, ubicado en la parte meridional de América del Norte. Su capital es la Ciudad de México.</string>
 </resources>

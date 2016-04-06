@@ -9,6 +9,7 @@
         android:targetSdkVersion="17" />
 
     <application
+        android:name="course.examples.UI.GridLayout.GlobalClass"
         android:allowBackup="false"
         android:icon="@drawable/icon"
         android:label="@string/app_name" >
@@ -21,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StatisticActivity"/>
         <activity android:name=".SummaryActivity"/>
     </application>
 

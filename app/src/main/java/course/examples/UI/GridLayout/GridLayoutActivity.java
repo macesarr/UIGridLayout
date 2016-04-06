@@ -13,7 +13,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class GridLayoutActivity extends Activity {
 
@@ -33,9 +36,15 @@ public class GridLayoutActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		GridView gridview = (GridView) findViewById(R.id.gridview);
+        // Calling Application class (see application tag in AndroidManifest.xml)
+        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+
+		final GridView gridview = (GridView) findViewById(R.id.gridview);
+        final TextView textView = (TextView) findViewById(R.id.tvGeneralStatistics);
 
 		gridview.setAdapter(new GalleryAdapter(this, mThumbIdsFlags));
+
+        textView.setText("TOTAL LIKES: " + globalVariable.getGeneralLikes() + " TOTAL VISITS: " + globalVariable.getGeneralVisits());
 
         // Capture GridView item click
         gridview.setOnItemClickListener(new OnItemClickListener() {
@@ -52,18 +61,6 @@ public class GridLayoutActivity extends Activity {
                 startActivity(intent);
             }
         });
-
-		// open new activity
-
-		final Button statisticButton = (Button) findViewById(R.id.btnStatitic);
-
-		statisticButton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				Intent helloAndroidIntent = new Intent(GridLayoutActivity.this,
-						StatisticActivity.class);
-				startActivity(helloAndroidIntent);
-			}
-		});
 
 	}
 }
